@@ -1,6 +1,4 @@
-package org.example.leetcode.leetCode14;
-
-import java.util.*;
+package org.example.leetcode.longestCommonPrefix14;
 
 public class LeetCode14My {
 

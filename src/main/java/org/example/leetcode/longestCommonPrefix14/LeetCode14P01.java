@@ -1,8 +1,8 @@
-package org.example.leetcode.leetCode14;
+package org.example.leetcode.longestCommonPrefix14;
 
 import java.util.Arrays;
 
-public class LeetCode14P02 {
+public class LeetCode14P01 {
 
     public static void main(String[] args) {
         //System.out.println(longestCommonPrefix( new String[]{"flower", "flow", "flight"})); // fl
@@ -13,17 +13,18 @@ public class LeetCode14P02 {
     }
 
     public static String longestCommonPrefix(String[] strs) {
-        StringBuilder ans = new StringBuilder();
         Arrays.sort(strs);
-        String first = strs[0];
-        String last = strs[strs.length-1];
-        for (int i=0; i<Math.min(first.length(), last.length()); i++) {
-            if (first.charAt(i) != last.charAt(i)) {
-                return ans.toString();
+        String s1 = strs[0];
+        String s2 = strs[strs.length-1];
+        int idx = 0;
+        while(idx < s1.length() && idx < s2.length()){
+            if(s1.charAt(idx) == s2.charAt(idx)){
+                idx++;
+            } else {
+                break;
             }
-            ans.append(first.charAt(i));
         }
-        return ans.toString();
+        return s1.substring(0, idx);
     }
     
 }
