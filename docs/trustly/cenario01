@@ -1,0 +1,3 @@
+O código fornecido não contém um bug específico que impeça a função de retornar o menor valor do array. No entanto, existe um bug potencial na implementação atual.
+
+O problema é que o valor inicial da variável ans é definido como 0. Se todos os valores no array A forem maiores ou iguais a zero, a função retornará 0, o que não seria o menor valor. Para corrigir esse problema, você pode definir o valor inicial de ans como o primeiro elemento do array A. Aqui está o código corrigido:

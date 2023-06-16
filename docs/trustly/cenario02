@@ -1,0 +1,34 @@
+this is a cleaning robot wich is cleaning a rectangular grid of size nNx M, represented by array R
+consisting of N strings. Rows are numbered from 0 tot N-1(from top to bottom) and columns are
+numbered from 0 to M-1(from left to right).
+The robots starts cleaning in the top-left corner, facing rightwards. It moves in a straight line for as
+long as it can, in other words, while there is an unoccupied grid square ahead of it. When it cannot
+move forward, it rotates 90 degrees clockkwise and tries to move forward again until it encounters
+another obstacle, and so on. Dots in the array(".") represent empty squares and "X" s represent
+occupied squares (ones the robot cannot move through). Each square that the robot occupied at
+least once is considered clean. The robot moves indefinitely.
+
+Write a function
+class Solution { public int solution(String[] R); }
+that given an array R consisting of N strings, each of length M representing the grid, returns the number of clean squares.
+
+examples.
+1. Given A = ["...X" ..","...XX","..X..." ], your function should return 6.
+
+The robots start at (0,0), facing rightwards, and moves to (0,2), where it turns dues to the obstacle
+at (0,3). Then it goes down from (0,2) to (1,2), where it changes direction again due to another
+obstacle. Next it goes left from (1,2) to (1,0), where it turns once because of the grid boundary,
+then it moves once and turns once more, wich makes it stand again at position(0,0) facing
+rightwards, just as at the beginning, wich means it will now repeat the loop indefinitely. The total
+number of cleaned squares is 6.
+
+2. Given A = ["....X..", "X......", ".....X.", "......."], your function should return 15.
+
+3. Given A = ["...X.", ".X..X", "X...X", "..X.."], your function should return 9.
+
+4. Given A = ["."], your function should return 1, because there is only one square on the grid and it is cleaned in the first move.
+
+Assume that:
+	N and M are integers within the range [1..20];
+	top-left cell is empty
+	each string in R consist only of the following characters "." and / or "X".
